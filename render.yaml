@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: discord-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python discord_bot_fixed.py
+    envVars:
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+    build:
+      environment:
+        pythonVersion: 3.11.8
